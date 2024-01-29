@@ -1,0 +1,7 @@
+{
+    "executeSubsequentChunks": "Alt+Cmd+Enter",
+    "insertChunkPython": "Alt+Cmd+O",
+    "toggleRmdVisualMode": "Alt+P",
+    "openDataVisualizationCheatSheet": "",
+    "insertChunk": "Alt+Cmd+I"
+}

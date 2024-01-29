@@ -1,0 +1,5 @@
+.DS_Store
+# Ignoring dictionary
+/dictionaries/
+rstudio-prefs.json
+crash-handler.conf

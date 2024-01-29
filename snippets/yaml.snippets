@@ -1,0 +1,18 @@
+snippet key
+	${1:key}: ${2:value}
+
+snippet list
+	${1:key}:
+	  - ${2:value1}
+	  - ${3:value2}
+
+snippet word
+	output:
+		word_document:
+			reference_docx: "${1:reference.docx}"
+			
+snippet date
+	date: "`r Sys.Date()`"
+
+snippet date2
+	date: "`r format(Sys.time(), '%d %B %Y')`"

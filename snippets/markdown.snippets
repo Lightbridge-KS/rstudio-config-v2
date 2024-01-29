@@ -1,0 +1,103 @@
+snippet [
+	[${1:label}](${2:location})
+
+snippet ![
+	![${1:label}](${2:location})
+
+snippet r
+	```{r ${1:label}, ${2:options}}
+	${0}
+	```
+
+snippet rcpp
+	```{r, engine='Rcpp'}
+	#include <Rcpp.h>
+	using namespace Rcpp;
+	
+	${0}
+	
+	```
+	
+snippet set
+	```{r setup, include=FALSE}
+	knitr::opts_knit\$set(root.dir = rprojroot::find_rstudio_root_file())
+	here::i_am("${1:path}.Rmd")
+	library(here)
+	${0}
+	```
+	
+snippet set2
+	```{r setup, include=FALSE}
+	knitr::opts_knit\$set(root.dir = rprojroot::find_rstudio_root_file()) # Set WD to Root
+	here::i_am("${1:path}.Rmd")
+	library(tidyverse)
+	library(here)
+	${0}
+	```
+
+snippet set3
+	```{r setup, include=FALSE}
+	knitr::opts_knit\$set(root.dir = rprojroot::find_rstudio_root_file()) # Set WD to Root
+	here::i_am("${1:path}")
+	knitr::opts_chunk\$set(echo = FALSE, message = FALSE, warning = FALSE, dpi = 320, fig.retina = 3,
+										fig.width = lbr::fig.mac\$wd, fig.height = lbr::fig.mac\$ht)
+	library(tidyverse)
+	library(here)
+	${0}
+	```
+	
+snippet setp
+	```{r setup, include=FALSE}
+	knitr::opts_knit\$set(root.dir = rprojroot::find_rstudio_root_file()) # Set WD to Root
+	here::i_am("my_dev/${1:path}.Rmd")
+	library(tidyverse)
+	library(testthat)
+	library(here)
+	${0}
+	```
+	
+snippet setpy
+	```{r setup, include=FALSE}
+	here::i_am("${1:path}")
+	options(reticulate.repl.quiet = TRUE) # To quiet python interpreter
+	library(reticulate)
+	library(here)
+	${0}
+	```
+	
+	
+
+snippet auth
+	```{r drive_auth, include=FALSE}
+	library(googledrive)
+	library(googlesheets4)
+	drive_auth(email = "${1:if_not_has_already}")
+	gs4_auth(token = drive_token())
+
+	drive_user()
+	```
+
+snippet use_desc
+	```{r DESCRIPTION}
+	usethis::use_description(
+	fields = list(
+		Title = "What The Package Does (one line, title case required)",
+		`Authors@R` = 'person("Kittipos", "Sirivongrungson", 
+													email = "ki11ip0.s.a.s@gmail.com", 
+													role = c("aut", "cre"))',
+		Description = "What the package does (one paragraph)",
+		License = "MIT + file LICENSE"
+		)
+	)
+	```
+	
+snippet update
+	Last updated: `r format(Sys.time(), '%d %B %Y')`
+	
+	
+snippet fig
+	```{r ${1:label}, echo=FALSE, out.width='${2:percent}%'}
+	#| fig-cap: ${3:caption}
+	knitr::include_graphics("${0}")
+	```
+	

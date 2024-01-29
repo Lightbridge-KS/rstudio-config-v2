@@ -1,0 +1,13 @@
+{
+    "styler::style_selection": "Shift+Cmd+I",
+    "styler::style_active_file": "",
+    "styler::style_active_pkg": "",
+    "datapasta::tribble_paste": "Alt+Shift+T",
+    "datapasta::vector_paste_vertical": "Alt+Shift+Cmd+V",
+    "datapasta::vector_paste": "Shift+Cmd+V",
+    "datapasta::zzz_rs_dfiddle": "Shift+Cmd+F",
+    "datapasta::zzz_rs_toggle_quotes": "Alt+Shift+Q",
+    "datapasta::df_paste": "Alt+Shift+D",
+    "rsthemes::use_theme_favorite": "Ctrl+Alt+N",
+    "rsthemes::use_theme_toggle": "Ctrl+Alt+D"
+}
